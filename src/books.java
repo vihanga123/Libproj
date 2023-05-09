@@ -26,6 +26,7 @@ public class books {
 
     String[] books = {"The Lord of the Rings", "Harry Potter", "The Hobbit", "Jane Eyre"};
         public void printBooks(){
+            bookdb();
             System.out.println(Arrays.toString(books));
 
 
