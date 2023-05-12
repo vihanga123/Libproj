@@ -10,12 +10,11 @@ public class Library {
     //Creates the database using sqlite
 
     public static void main(String[] args) {
+        //Calls the database connection methods
         Database db = new Database();
         Database.LibraryDB();
         Database.bookDB();
-
-
-        //Calls the database connection method
+        Database.accountDB();
 
 
         System.out.printf("Welcome to the library! Please Type '1' Login or '2' Register");

@@ -50,4 +50,27 @@ public class Database {
             }
         }
     }
+    public static void accountDB(){
+        String url = "jdbc:sqlite:C://sqlite/java/connect/library.db";
+
+        String sql = "CREATE TABLE IF NOT EXISTS account (\n"
+                + " id integer PRIMARY KEY AUTOINCREMENT,\n"
+                + " name text NOT NULL,\n"
+                + " password text NOT NULL,\n"
+                + " DOB DATE NOT NULL\n"
+                + ");";
+
+
+        try(Connection conn = DriverManager.getConnection(url);
+            Statement stmt = conn.createStatement())
+        {
+
+            //table creation
+            stmt.execute(sql);
+            System.out.println("Connection to SQLite has been established.");
+
+        } catch (SQLException e1) {
+            throw new RuntimeException(e1);
+        }
+    }
 }
